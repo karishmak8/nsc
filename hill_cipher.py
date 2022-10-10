@@ -68,5 +68,5 @@ m=input("Enter plain text : ")
 key=input("Enter the key : ")
 hillcipher(m,key)
 
-
+#key=RJSHJMTJK
 
