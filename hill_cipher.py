@@ -22,7 +22,7 @@ def encrypt(mv):
     for i in range(3):
         ct.append(chr(cm[i][0] + 65))
     print("Encrypted Ciphertext : ","".join(ct))
-def inversematrix():
+'''def inversematrix():
     for i in range(3):
         for j in range(3):
             if(i == j):
@@ -39,7 +39,14 @@ def inversematrix():
                     b[i][j] = (b[i][j]*q) - (p*b[k][j])
     for i in range(3):
         for j in range(3):
-            b[i][j] = b[i][j] / km[i][i]
+            b[i][j] = b[i][j] / km[i][i]'''
+def inversematrix():
+    det=0
+    for i in range(3):
+        det=det+(km[0][i] * (km[1][(i+1)%3] * km[2][(i+2)%3] - km[1][(i+2)%3] * km[2][(i+1)%3]));
+    for i in range(3):
+        for j in range(3):
+            b[i][j]=(((km[(j+1)%3][(i+1)%3] * km[(j+2)%3][(i+2)%3]) - (km[(j+1)%3][(i+2)%3] * km[(j+2)%3][(i+1)%3]))/ det)
 def decrypt():
     inversematrix()
     for i in range(3):
