@@ -23,3 +23,7 @@ c=(pow(m,e))%n
 print("encrypted msg:"+str(c))
 m1=(pow(c,d))%n
 print("decrypted msg:"+str(m1))
+
+#11
+#5
+#8
